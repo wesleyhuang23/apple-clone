@@ -10,7 +10,7 @@
             <li>Music</li>
             <li>Support</li>
             <li class="search"><img src="https://cdn2.iconfinder.com/data/icons/apple-inspire-white/100/Apple-30-512.png" style="width: 15px; height: 15px; filter: invert(100%)"/></li>
-            <li><div class="bag-wrapper"><img src="https://images.apple.com/support/assets/images/home/2015/store_bag_icon_2x.png" style="height: 31px; width: 31px; filter: invert(100%)"></div></li>
+            <li><div class="bag-wrapper"><img src="https://images.apple.com/support/assets/images/home/2015/store_bag_icon_2x.png" style="height: 35px; width: 35px; filter: invert(100%)"></div></li>
         </ul>
     </div>
 </template>
@@ -28,12 +28,15 @@ export default {
 
 <style lang="scss" scoped>
     .navigation{
-        background-color: #323232;
+        background-color: rgba(50, 50, 50, .9);
         width: 100%;
         height: 48px;
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 9999;
+        position: absolute;
+
         li{
             color: white;
             list-style: none;
@@ -43,21 +46,22 @@ export default {
             justify-content: center;
             width: (100% / 10);
             cursor: pointer;
-            transition: opacity .5s;
+            transition: opacity .3s;
         }
         li:hover{
-            opacity: .5;
+            opacity: .2;
         }
     }
     ul{
         display: flex;
         flex-direction: row;
         width: 1000px;
+        margin-top: 5px;
     }
     .search{
         img{
             position: absolute;
-            top: 16px;
+            top: 15px;
         }   
     }
     .bag-wrapper{
@@ -67,5 +71,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 12px;
     }
 </style>
