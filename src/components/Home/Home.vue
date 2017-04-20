@@ -12,6 +12,16 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active" id="red">
+            <div class="heading-wrapper">
+              <div class="first-row">
+              <p>Special Edition</p>
+              <h1>iPhone 7</h1>
+              </div>
+              <div class="heading">
+                <span> Now in</span>
+                <img id="product-red" src="./../../assets/apple-img/home/productred_logo_medium_2x.png"/>
+              </div>
+            </div>
             <img src="./../../assets/apple-img/home/iphone7_productred_medium_2x.png" alt="Chania">
           </div>
 
@@ -62,13 +72,52 @@ export default {
     overflow: hidden;
   }
   #red{
-    background-color: #F2F2F2;
+    background-color: #CC3341;
     img{
-      position: relative;
-      top: 200px;
-      
+      width: 800px;
+      margin: auto;
+    }
+    #product-red{
+      width: 200px;
+      margin-left: 20px;
+    }
+    
+  }
+  .first-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 10%;
+
+    h1{
+      color: white;
+      text-align: center;
+    }
+    p{
+      margin: auto;
+      font-size: 10px;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 2px 8px;
     }
   }
+  .heading{
+    display: flex;
+    justify-content: center;
+    width: 420px;
+    margin: auto;
+    padding-top: 150px;
+    span{
+      font-size: 50px;
+      color: white;
+      padding-top: 32px;
+      padding-left: 10px;
+    }
+  }
+ 
   #w{
     background-color: #F2F2F2;
     img{
@@ -79,7 +128,7 @@ export default {
   #pad{
     background-color: #FAFAFA;
     img{
-      padding-top: 300px;
+      padding-top: 280px;
       margin: auto;
       width: 900px;
     }
