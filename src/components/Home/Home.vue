@@ -62,6 +62,7 @@ export default {
     overflow: hidden;
   }
   #red{
+    background-color: #F2F2F2;
     img{
       position: relative;
       top: 200px;
@@ -69,12 +70,14 @@ export default {
     }
   }
   #w{
+    background-color: #F2F2F2;
     img{
       width: 950px;
       margin: auto;
     }
   }
   #pad{
+    background-color: #FAFAFA;
     img{
       padding-top: 300px;
       margin: auto;

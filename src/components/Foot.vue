@@ -88,6 +88,26 @@
             </ul>
         </div>
       </div>
+
+      <div class="legal">
+        <p>More ways to shop: Visit an <a href="#"> Apple Store</a>, call 1-800-MY-APPLE, or <a href="#">find a reseller.</a></p>
+        <hr>
+        <div class="bottom">
+          
+          <p>Copyright 2017 Apple Inc. All rights reserved.</p>
+          <div>
+            <ul id="list">
+              <li style="font-weight: lighter;">Privacy Policy |</li>
+              <li>Terms of Use |</li>
+              <li>Sale and Refunds |</li>
+              <li>Legal |</li>
+              <li>Site Map</li>
+            </ul>
+          </div>
+          <p class="country">United States</p>
+
+        </div>
+      </div>
     </footer>
 </template>
 
@@ -99,9 +119,10 @@ export default {
 
 <style lang="scss" scoped>
 footer{
-    height: 30vh;
+    height: 50vh;
     background-color: #F2F2F2;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
   .more{
@@ -130,5 +151,43 @@ footer{
     &:hover{
       text-decoration: underline;
     }
+  }
+  .legal{
+    width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    p{
+      font-size: 12px;
+      font-weight: lighter;
+      color: #888888;
+    }
+  }
+  #list{
+    display: flex;
+    flex-direction: row;
+
+    li{
+      margin-left: 5px;
+      cursor: pointer;
+      color: #5B5B5B;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 2px;
+  }
+  .bottom{
+    width: 100%;
+    display: flex;
+  }
+  .country{
+    position: relative;
+    right: -150px;
   }
 </style>

@@ -55,7 +55,7 @@ export default {
     ul{
         display: flex;
         flex-direction: row;
-        width: 1000px;
+        width: 1150px;
         margin-top: 5px;
     }
     .search{
