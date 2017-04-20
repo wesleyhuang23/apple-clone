@@ -26,6 +26,10 @@
           </div>
 
           <div class="item" id="w">
+            <div class="w-heading">
+              <div class="watch-logo"></div>
+              <h1>Live a Better day.</h1> 
+            </div>
             <img src="./../../assets/apple-img/home/watch_medium_2x.jpg" alt="Chania">
           </div>
 
@@ -68,13 +72,13 @@ export default {
 
 <style lang="scss" scoped>
   .carousel{
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
   }
   #red{
     background-color: #CC3341;
     img{
-      width: 800px;
+      width: 850px;
       margin: auto;
     }
     #product-red{
@@ -107,8 +111,9 @@ export default {
   .heading{
     display: flex;
     justify-content: center;
-    width: 450px;
-    margin: auto;
+    width: 408px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 160px;
 
     span{
@@ -122,8 +127,27 @@ export default {
   #w{
     background-color: #F2F2F2;
     img{
-      width: 950px;
+      width: 850px;
       margin: auto;
+      padding-top: 30px;
+    }
+  }
+  .watch-logo{
+    width: 122px;
+    height: 44px;
+    background-image: url("https://images.apple.com/v/home/df/images/shared/watch_logo_large_2x.png");
+    background-size: contain;
+    margin: auto;
+  }
+  .w-heading{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 12%;
+
+    h1{
+      font-size: 40px;
+      font-weight: 500;
     }
   }
   #pad{
@@ -148,8 +172,5 @@ export default {
       border: 1px solid gray;
       border-radius: 100px;
     }
-  }
-  .carousel-indicators .active{
-    color: gray;
   }
 </style>

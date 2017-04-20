@@ -41,7 +41,7 @@ export default {
             color: white;
             list-style: none;
             font-weight: 100;
-            font-size: 15px;
+            font-size: 14px;
             display: flex;
             justify-content: center;
             width: (100% / 10);
