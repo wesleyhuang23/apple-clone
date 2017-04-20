@@ -2,15 +2,19 @@
   <div id="app">
     <Navigation></Navigation>
     <router-view></router-view>
+    <Foot></Foot>
   </div>
 </template>
 
 <script>
+
 import Navigation from './components/Navigation.vue';
+import Foot from './components/Foot.vue';
 
 export default {
   components: {
     Navigation,
+    Foot
 },
   name: 'app'
 }
