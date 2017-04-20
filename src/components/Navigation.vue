@@ -1,8 +1,8 @@
 <template>
     <div class="navigation">
         <ul>
-            <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/2000px-Apple_logo_black.svg.png" style="height: 20px; width: 20px; filter: invert(100%)"/> </li>
-            <li>Mac</li>
+            <li><router-link to="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/2000px-Apple_logo_black.svg.png" style="height: 20px; width: 20px; filter: invert(100%)"/></router-link> </li>
+            <li><router-link to="/mac">Mac</router-link></li>
             <li>iPad</li>
             <li>iPhone</li>
             <li>Watch</li>

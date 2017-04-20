@@ -29,4 +29,11 @@ export default {
     display: flex;
     justify-content: center;
   }
+  a{
+    color: inherit;
+  }
+  a:hover{
+    color: inherit;
+    text-decoration: none;
+  }
 </style>
