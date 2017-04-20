@@ -27,6 +27,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
     .navigation{
         background-color: rgba(50, 50, 50, .9);
         width: 100%;

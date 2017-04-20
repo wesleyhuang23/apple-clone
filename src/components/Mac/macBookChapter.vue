@@ -1,35 +1,34 @@
 <template>
-    <div class="mbp-chapter">
+    <div class="mb-chapter">
         <div class="header">
-            <h2>Macbook Pro</h2>
-            <h1>A touch of genius.</h1>
-            <p><span>Learn more ></span><span>Buy ></span></p>
+            <h1>MacBook</h1>
+            <h2>Light. Years ahead.</h2>
+            <div><span>Learn More ></span><span>Buy ></span></div>
         </div>
         <div class="img">
-            <img src="./../../assets/apple-img/mac/macbookpro_large_2x.png"/> 
+            <img src="./../../assets/apple-img/mac/macbook_large_2x.png"/> 
         </div>
     </div>
 </template>
 
-<script>
-</script>
-
 <style lang="scss" scoped>
-    .mbp-chapter{
-        height: 80vh;
-        overflow: hidden;
+    .mb-chapter {
+        height: 85vh;
         position: relative;
-        display: flex;
-        justify-content: center;
+        overflow: hidden;
+        background-color: #FEFEFE;
     }
     .header{
         text-align: center;
-        padding-top: 100px;
+        margin-top: 100px;
+        margin-bottom: 150px;
 
         h1{
-            font-size:55px;
-            font-weight: 500;
+            font-size: 30px;
+        }
+        h2{
             margin-bottom: 20px;
+            font-size: 40px
         }
         span{
             padding-right: 20px;
@@ -40,9 +39,10 @@
         }
     }
     .img{
-        position: absolute;
+        width: 950px;
+        position: relative;
+        margin: auto;
         bottom: 0px;
-        width: 2400px;
 
         img{
             width: 100%;
