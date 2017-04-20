@@ -42,23 +42,31 @@ export default {
         }
     }
     .mbp{
-        background-image: url('./../../assets/apple-img/home/macbook_pro_large_2x.jpg');
+        background-image: url('./../../assets/apple-img/home/macbook_pro_medium_2x.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-color: #FAFAFA;
     }
     .iphone{
-        background-image: url('./../../assets/apple-img/home/iphone_large_2x.jpg');
+        background-image: url('./../../assets/apple-img/home/iphone_medium_2x.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-color: #0A0A0A;
     }
     .airpods{
-        background-image: url('./../../assets/apple-img/home/airpods_large_2x.jpg');
+        background-image: url('./../../assets/apple-img/home/airpods_medium_2x.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-color: #FAFAFA;
     }
     .accessories{
-        background-image: url('./../../assets/apple-img/home/accessories_large_2x.jpg');
+        background-image: url('./../../assets/apple-img/home/accessories_medium_2x.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-color: #F7F7F7;
     }
 </style>

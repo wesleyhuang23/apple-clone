@@ -40,7 +40,7 @@
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="right">
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -78,7 +78,7 @@ export default {
       margin: auto;
     }
     #product-red{
-      width: 200px;
+      width: 240px;
       margin-left: 20px;
     }
     
@@ -107,11 +107,12 @@ export default {
   .heading{
     display: flex;
     justify-content: center;
-    width: 420px;
+    width: 450px;
     margin: auto;
-    padding-top: 150px;
+    padding-top: 160px;
+
     span{
-      font-size: 50px;
+      font-size: 45px;
       color: white;
       padding-top: 32px;
       padding-left: 10px;
@@ -133,5 +134,22 @@ export default {
       width: 900px;
     }
   }
-  
+  .carousel-control.right{
+    background-image: none;
+  }
+  .carousel-control.left{
+    background-image: none;
+  }
+  .carousel-indicators{
+    li{
+      width: 50px;
+      height: 5px;
+      margin-left: 5px;
+      border: 1px solid gray;
+      border-radius: 100px;
+    }
+  }
+  .carousel-indicators .active{
+    color: gray;
+  }
 </style>
