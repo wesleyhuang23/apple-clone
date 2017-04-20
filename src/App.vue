@@ -21,4 +21,8 @@ export default {
     margin: 0;
     font-family: Helvetica, sans-serif
   }
+  .carousel-indicators{
+    display: flex;
+    justify-content: center;
+  }
 </style>

@@ -7,21 +7,20 @@
           <li data-target="#myCarousel" data-slide-to="0"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active" id="red">
-            <img src="./../assets/apple-img/home/iphone7_productred_medium_2x.png" alt="Chania">
+            <img src="./../../assets/apple-img/home/iphone7_productred_medium_2x.png" alt="Chania">
           </div>
 
           <div class="item" id="w">
-            <img src="./../assets/apple-img/home/watch_medium_2x.jpg" alt="Chania">
+            <img src="./../../assets/apple-img/home/watch_medium_2x.jpg" alt="Chania">
           </div>
 
           <div class="item" id="pad">
-            <img src="./../assets/apple-img/home/ipad_availability_medium_2x.jpg" alt="Flower">
+            <img src="./../../assets/apple-img/home/ipad_availability_medium_2x.jpg" alt="Flower">
           </div>
 
         </div>
@@ -37,7 +36,7 @@
         </a>
       </div>
     </div>
-
+    <Promo></Promo>
     <footer>
       <div class="more">
         <div class="shop-and-learn"> 
@@ -132,7 +131,11 @@
 </template>
 
 <script>
+import Promo from './Promo';
 export default {
+  components:{
+    Promo,
+  },
   name: 'home',
   data () {
     return {
@@ -145,7 +148,7 @@ export default {
 
 <style lang="scss" scoped>
   .carousel{
-    height: 90vh;
+    height: 80vh;
     overflow: hidden;
   }
   #red{
@@ -163,9 +166,9 @@ export default {
   }
   #pad{
     img{
-      padding-top: 300px;
+      padding-top: 200px;
       margin: auto;
-      width: 1200px;
+      width: 1000px;
     }
   }
   footer{
@@ -177,7 +180,7 @@ export default {
   .more{
     display: flex;
     justify-content: space-between;
-    width: 980px;
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
@@ -187,10 +190,18 @@ export default {
   }
   li{
     font-weight: lighter;
-    font-size: 12px;
+    font-size: 10px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 6px;
 
     &:first-child{
       font-weight: bold;
+      cursor: none;
+      text-decoration: none;
+    }
+    &:hover{
+      text-decoration: underline;
     }
   }
 </style>
