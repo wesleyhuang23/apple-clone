@@ -1,14 +1,15 @@
 <template>
+<chapterNav></chapterNav>
 </template>
 
 <script>
+import chapterNav from './MacChapterNav';
+
 export default{
     name: 'Mac',
-    data () {
-        return {
-
-        }
-    }
+    components: {
+        chapterNav,
+    },
 }
 </script>
 
