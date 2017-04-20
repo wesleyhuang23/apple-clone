@@ -34,6 +34,10 @@
           </div>
 
           <div class="item" id="pad">
+            <div class="pad-header">
+              <h1>iPad</h1>
+              <h2>Flat-out fun.</h2>
+            </div>
             <img src="./../../assets/apple-img/home/ipad_availability_medium_2x.jpg" alt="Flower">
           </div>
 
@@ -155,7 +159,22 @@ export default {
     img{
       padding-top: 280px;
       margin: auto;
-      width: 900px;
+      width: 1000px;
+    }
+  }
+  #myCarousel{
+    background-color:#FAFAFA;
+  }
+  .pad-header{
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    h1{
+      text-align: center;
+    }
+    h2{
+      text-align: center;
+      font-size: 50px;
     }
   }
   .carousel-control.right{
