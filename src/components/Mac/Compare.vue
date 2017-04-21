@@ -53,7 +53,7 @@
         }
     }
     .img{
-        width: 1000px;
+        width: 1040px;
         margin: auto;
 
         img{
@@ -64,8 +64,8 @@
         width: 1000px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 100px;
-        margin-bottom: 130px;
+        margin-top: 80px;
+        margin-bottom: 100px;
     }
     .second-row{
         width: 700px;
@@ -78,10 +78,10 @@
             text-align: center;
 
             h1{
-                font-size: 20px;
+                font-size: 18px;
             }
             img{
-                width: 40px;
+                width: 35px;
             }
             p{
                 width: 150px;
