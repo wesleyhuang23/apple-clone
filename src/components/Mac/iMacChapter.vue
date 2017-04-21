@@ -15,13 +15,15 @@
 </script>
 
 <style lang="scss" scoped>
-    .imac-header{
-        height: 80vh;
+    .imac-chapter{
+        height: 67vh;
+        background: linear-gradient(#fff, #FDFDFD, #F7F7F7);
     }
     .header{
         text-align: center;
         margin-top: 100px;
         margin-bottom: 70px;
+        
 
         h1{
             font-size: 30px;
