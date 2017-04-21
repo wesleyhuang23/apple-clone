@@ -3,6 +3,7 @@
         <chapterNav></chapterNav>
         <macBookProChapter></macBookProChapter>
         <macBookChapter></macBookChapter>
+        <iMacChapter></iMacChapter>
     </div>
 </template>
 
@@ -10,6 +11,7 @@
 import chapterNav from './MacChapterNav';
 import macBookProChapter from './MacBookProChapter';
 import macBookChapter from './MacBookChapter';
+import iMacChapter from './iMacChapter';
 
 export default{
     name: 'Mac',
@@ -17,6 +19,7 @@ export default{
         chapterNav,
         macBookProChapter,
         macBookChapter,
+        iMacChapter,
     },
 }
 </script>

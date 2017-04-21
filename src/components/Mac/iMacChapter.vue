@@ -1,27 +1,27 @@
 <template>
-    <div class="mb-chapter">
+    <div class="imac-chapter">
         <div class="header">
-            <h1>MacBook</h1>
-            <h2>Light. Years ahead.</h2>
-            <div><span>Learn More ></span><span>Buy ></span></div>
+            <h1>iMac</h1>
+            <h2>Retina. In colossal and ginormous.</h2>
+            <p><span>Learn more ></span><span>Buy ></span></p>
         </div>
         <div class="img">
-            <img src="./../../assets/apple-img/mac/macbook_large_2x.png"/> 
+            <img src="./../../assets/apple-img/mac/imac_large_2x.png" />
         </div>
     </div>
 </template>
 
+<script>
+</script>
+
 <style lang="scss" scoped>
-    .mb-chapter {
-        height: 85vh;
-        position: relative;
-        overflow: hidden;
-        background: linear-gradient(#fff, #FDFDFD, #F7F7F7);
+    .imac-header{
+        height: 80vh;
     }
     .header{
         text-align: center;
         margin-top: 100px;
-        margin-bottom: 150px;
+        margin-bottom: 70px;
 
         h1{
             font-size: 30px;
@@ -39,10 +39,8 @@
         }
     }
     .img{
-        width: 950px;
-        position: relative;
+        width: 1150px;
         margin: auto;
-        bottom: 0px;
 
         img{
             width: 100%;
