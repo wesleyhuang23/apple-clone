@@ -6,6 +6,7 @@
         <iMacChapter></iMacChapter>
         <Compare></Compare>
         <Accessories></Accessories>
+        <MacOSchapter></MacOSchapter>
     </div>
 </template>
 
@@ -16,6 +17,7 @@ import macBookChapter from './MacBookChapter';
 import iMacChapter from './iMacChapter';
 import Compare from './Compare';
 import Accessories from './Accessories';
+import MacOSchapter from './MacOSchapter';
 
 export default{
     name: 'Mac',
@@ -26,6 +28,7 @@ export default{
         iMacChapter,
         Compare,
         Accessories,
+        MacOSchapter,
     },
 }
 </script>
