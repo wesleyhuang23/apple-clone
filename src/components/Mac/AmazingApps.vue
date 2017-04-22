@@ -24,6 +24,28 @@
                 <span>Learn more ></span> 
             </div>
         </div>
+        <h1>Pro Apps</h1>
+        <p>For professionals ready to push their creativity, these industry-leading apps offer maximum control over editing, processing, and output of music and film.</p>
+        <div class="nav">
+            <ul>
+                <li v-on:click="changeView2(0)"><img src="./../../assets/apple-img/mac/pro_finalcut_header_large_2x.png"/>{{proTitle[0]}}</li>
+                <li v-on:click="changeView2(1)"><img src="./../../assets/apple-img/mac/pro_logicpro_header_large_2x.png"/>{{proTitle[1]}}</li>
+                <li v-on:click="changeView2(2)"><img src="./../../assets/apple-img/mac/pro_motion_header_large_2x.png"/> {{proTitle[2]}}</li>
+                <li v-on:click="changeView2(3)"><img src="./../../assets/apple-img/mac/pro_compressor_header_large_2x.png"/> {{proTitle[3]}}</li>
+                <li v-on:click="changeView2(4)"><img src="./../../assets/apple-img/mac/pro_mainstage_header_large_2x.png"/> {{proTitle[4]}}</li>
+            </ul>
+        </div>
+        <div class="apps" id="pro">
+            <div class="img">
+                <img v-bind:src="proImage[count2]()"/>
+            </div>
+            <div class="info">
+                <img v-bind:src="proIcon[count2]()"/>
+                <h1>{{proTitle[count2]}}</h1>
+                <p>{{proDescription[count2]}}</p>
+                <span>Learn more ></span> 
+            </div>
+        </div>
     </section>
 </template>
 
@@ -33,6 +55,7 @@ export default {
     data () {
         return {
             count: 0,
+            count2: 0,
             appTitle: ['Photos','iMovie','GarageBand','Pages','Numbers','Keynote','Safari',],
             appDescription: [
                 'Keep your growing library organized and accessible. Perfect your images and create beautiful gifts for sharing. And with iCloud Photo Library, you can store a lifetime’s worth of photos and videos in the cloud.',
@@ -61,11 +84,36 @@ export default {
                 function(){return require('./../../assets/apple-img/mac/bia_keynote_header_large_2x.png')},
                 function(){return require('./../../assets/apple-img/mac/bia_safari_header_large_2x.png')}
             ],
+            proTitle: ['Final Cut X', 'Logic Pro X', 'Motion', 'Compressor', 'Main Stage 3'],
+            proDescription: [
+                'Built to meet the needs of today’s creative editors, Final Cut Pro offers revolutionary video editing, powerful media organization, and incredible performance optimized for Mac computers and macOS Sierra.',
+                'Logic Pro puts a complete recording and MIDI production studio on your Mac, with everything you need to write, record, edit and mix like never before. And with a huge collection of full-featured plug-ins along with thousands of sounds and loops, you’ll have everything you need to go from first inspiration to final master, no matter what kind of music you want to create.',
+                'Motion is a powerful motion graphics tool that makes it easy to create cinematic 2D and 3D titles, fluid transitions, and realistic effects in real time.',
+                'Add power and flexibility for exporting projects from Final Cut Pro. Customize output settings, work faster with distributed encoding, and easily package your film for the iTunes Store. Compressor is the perfect companion for custom encoding.',
+                'Take your Mac to the stage with a full-screen interface optimized for live performance, flexible hardware control, and a massive collection of plug-ins and sounds that are fully compatible with Logic Pro X.',
+            ],
+            proImage: [
+                function(){return require('./../../assets/apple-img/mac/pro_finalcut_large_2x.png')},
+                function(){return require('./../../assets/apple-img/mac/pro_logicpro_large_2x.png')},
+                function(){return require('./../../assets/apple-img/mac/pro_motion_large_2x.png')},
+                function(){return require('./../../assets/apple-img/mac/pro_compressor_large_2x.png')},
+                function(){return require('./../../assets/apple-img/mac/pro_mainstage_large_2x.png')},
+            ],
+            proIcon: [
+                function(){return require('./../../assets/apple-img/mac/pro_finalcut_header_large_2x.png')},
+                function(){return require('./../../assets/apple-img/mac/pro_logicpro_header_large_2x.png')},
+                function(){return require('./../../assets/apple-img/mac/pro_motion_header_large_2x.png')},
+                function(){return require('./../../assets/apple-img/mac/pro_compressor_header_large_2x.png')},
+                function(){return require('./../../assets/apple-img/mac/pro_mainstage_header_large_2x.png')},
+            ]
         }
     },
     methods: {
         changeView: function(id){
             this.count = id;
+        },
+        changeView2: function(id){
+            this.count2 = id;
         }
     }
 }
@@ -146,5 +194,8 @@ export default {
             color: #0070C9;
             cursor: pointer;
         }
+    }
+    #pro{
+        flex-direction: row-reverse;
     }
 </style>
