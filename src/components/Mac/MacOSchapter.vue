@@ -27,7 +27,7 @@
         background: linear-gradient(#fff, #FDFDFD, #F7F7F7);
     }
     .img{
-        width: 650px;
+        width: 630px;
         margin: auto;
         padding-bottom: 40px;
         padding-top: 90px;
