@@ -26,7 +26,7 @@
         </div>
         <h1>Pro Apps</h1>
         <p>For professionals ready to push their creativity, these industry-leading apps offer maximum control over editing, processing, and output of music and film.</p>
-        <div class="nav">
+        <div class="nav" id="pro-nav">
             <ul>
                 <li v-on:click="changeView2(0)"><img src="./../../assets/apple-img/mac/pro_finalcut_header_large_2x.png"/>{{proTitle[0]}}</li>
                 <li v-on:click="changeView2(1)"><img src="./../../assets/apple-img/mac/pro_logicpro_header_large_2x.png"/>{{proTitle[1]}}</li>
@@ -197,5 +197,11 @@ export default {
     }
     #pro{
         flex-direction: row-reverse;
+        width: 1050px;
+        position: relative;
+        left: 100px;
+    }
+    #pro-nav{
+        width: 500px;
     }
 </style>

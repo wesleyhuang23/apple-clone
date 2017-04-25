@@ -8,6 +8,7 @@
         <Accessories></Accessories>
         <MacOSchapter></MacOSchapter>
         <AmazingApps></AmazingApps>
+        <BillboardChapter></BillboardChapter>
     </div>
 </template>
 
@@ -20,6 +21,7 @@ import Compare from './Compare';
 import Accessories from './Accessories';
 import MacOSchapter from './MacOSchapter';
 import AmazingApps from './AmazingApps';
+import BillboardChapter from './BillboardChapter';
 
 
 export default{
@@ -33,6 +35,7 @@ export default{
         Accessories,
         MacOSchapter,
         AmazingApps,
+        BillboardChapter,
     },
 }
 </script>
