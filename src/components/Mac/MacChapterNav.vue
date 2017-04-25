@@ -1,7 +1,7 @@
 <template>
     <div class="mac-chapter-nav">
         <ul>
-            <li><img src="./../../assets/apple-img/mac/macbook_large.svg"/>MacBook</li>
+            <li><router-link to="/macbook"><img src="./../../assets/apple-img/mac/macbook_large.svg"/>MacBook</router-link></li>
             <li><img src="./../../assets/apple-img/mac/macbookair_large.svg"/>MacBook Air</li>
             <li><img src="./../../assets/apple-img/mac/macbookpro_large.svg"/>MacBook Pro<p>New</p></li>
             <li><img src="./../../assets/apple-img/mac/imac_large.svg"/>iMac</li>
@@ -21,6 +21,10 @@
 <style lang="scss" scoped>
 .mac-chapter-nav{
     background-color: #F6F6F6;
+}
+a{
+    display: flex;
+    flex-direction: column;
 }
 ul{
     list-style: none;

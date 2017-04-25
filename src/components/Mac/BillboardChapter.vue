@@ -38,6 +38,10 @@ export default {
             height: 60vh;
             width: 100%;
             margin-bottom: 10px;
+
+            &:last-child{
+                margin-bottom: 0px;
+            }
         }
     }
     h1{
