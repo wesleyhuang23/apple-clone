@@ -1,7 +1,7 @@
 <template>
-    <div class="nav">
-        <h1><router-link to="/macbook">MacBook</router-link></h1>
-        <div>
+    <div class="nav">     
+        <div class="nav-contents">
+            <h1><router-link to="/macbook">MacBook</router-link></h1>
             <ul>
                 <li><router-link to="/macbook/design">Design</router-link></li>
                 <li><router-link to="/macbook/wireless">Wireless</router-link></li>
@@ -23,16 +23,25 @@
     }
     .nav{
         border-bottom: 1px solid #EFEFEF;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 44px;
-        width: 700px;
+        width: 1000px;
+        // position: fixed;
+        // top: 57px;
+        // left: 470px;
+        background-color: rgba(256,256,256, .4);
         margin: auto;
+        padding-top: 55px;
+        // border: 1px solid red;
+    }
+    .nav-contents{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
     ul{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         list-style: none;
         width: 425px;
         padding-top: 20px;

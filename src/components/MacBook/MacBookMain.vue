@@ -14,7 +14,10 @@
                 <p><span>10<span> hours</span></span><br> BATTERY LIFE*</p> 
             </div>
         </div>
-        
+        <div class="nopad">
+            <figure>
+            </figure>
+        </div>
     </section>
 </template>
 
@@ -26,7 +29,7 @@
         text-align: center;
         font-weight: lighter;
         font-size:50px;
-        padding-top: 50px;
+        padding-top: 30px;
         padding-bottom: 30px;
 
         span{
@@ -87,6 +90,22 @@
                     font-size: 25px;
                 }
             }
+        }
+    }
+    .nopad{
+        height: 100vh;
+        figure{
+            // border: 1px solid green;
+            background-image: url("https://images.apple.com/v/macbook/e/overview/images/overview_colors_large_2x.jpg");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        img{
+            width: 100%;
         }
     }
 </style>
