@@ -33,6 +33,16 @@
                 </aside>
             </div>
         </div>
+        <div class="keyboard">
+            <div class="line"></div>
+            <figure></figure>
+            <h1>A full-size keyboard. <br> In a fraction of the space.</h1>
+            <p>We believe that a comfortable, full-size keyboard is essneital for a great notebook experience. But to fit one into the elegantly thin MacBook, we had to completely rethink how a keyboard is engineered and constrcted. We redesigned each key and its underlying mechanism  — not only making the whole keyboard much thinner, but also allowing for more comfortable, precise, and responsive typing that just feels right. <span>Learn more about the Design ></span></p>
+            
+            <div class="img">
+                <img src="./../../assets/apple-img/mac/macbook/overview_keyboard_on_large_2x.jpg"/>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -40,6 +50,12 @@
 </script>
 
 <style lang="scss" scoped>
+    .line{
+        padding-top: 50px;
+        width: 50px;
+        border-bottom: 1px solid gray;
+        margin: auto;
+    }
     h1{
         text-align: center;
         font-weight: lighter;
@@ -133,6 +149,11 @@
         padding-bottom: 110px;
         background-color: #FAFAFA;
 
+        .line{
+            margin: 0px;
+            border-color: #CCCCCC
+        }
+
         figure{
             // border: 1px solid green;
             height: 640px;
@@ -140,7 +161,7 @@
             width: 100%;
             position: relative;
             background-image: url('./../../assets/apple-img/Mac/macbook/overview_retina_large_2x.jpg');
-            background-size: cover;
+            background-size: 100% 100%;
             background-position: center;
         }
         .section-content{
@@ -162,7 +183,7 @@
                 flex-direction: column;
             }
             #line{
-                border-bottom: 1px solid gray;
+                border-bottom: 1px solid #CCCCCC;
                 width: 50px;
             }
             h1{
@@ -194,6 +215,36 @@
                 color: #B0B0B0;
             }
         }
-        
+    }
+    .keyboard{
+        h1{
+            width: 500px;
+            font-size: 40px;
+            margin: auto;
+        }
+        p{
+            font-size: 17px;
+            font-weight: lighter;
+            padding-bottom: 80px;
+            width: 660px;
+
+            span{
+                color: #0070C9;
+                cursor: pointer;
+                font-size: 15px;
+                display: block;
+            }
+        }
+        .img{
+            width: 1150px;
+            margin: auto;
+            padding-bottom: 100px;
+        }
+        img{
+            width: 100%;
+        }
+        .line{
+            border-color: #CCCCCC;
+        }
     }
 </style>
