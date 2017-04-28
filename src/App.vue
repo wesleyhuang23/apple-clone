@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 import Navigation from './components/Navigation.vue';
 import Foot from './components/Foot.vue';
 

@@ -37,10 +37,33 @@
             <div class="line"></div>
             <figure></figure>
             <h1>A full-size keyboard. <br> In a fraction of the space.</h1>
-            <p>We believe that a comfortable, full-size keyboard is essneital for a great notebook experience. But to fit one into the elegantly thin MacBook, we had to completely rethink how a keyboard is engineered and constrcted. We redesigned each key and its underlying mechanism  — not only making the whole keyboard much thinner, but also allowing for more comfortable, precise, and responsive typing that just feels right. <span>Learn more about the Design ></span></p>
+            <p>We believe that a comfortable, full-size keyboard is essneital for a great notebook experience. But to fit one into the elegantly thin MacBook, we had to completely rethink how a keyboard is engineered and constrcted. We redesigned each key and its underlying mechanism  — not only making the whole keyboard much thinner, but also allowing for more comfortable, precise, and responsive typing that just feels right. <br><span>Learn more about the Design ></span></p>
             
             <div class="img">
                 <img src="./../../assets/apple-img/mac/macbook/overview_keyboard_on_large_2x.jpg"/>
+            </div>
+            <h1>The trackpad, pushed even further with Force Touch.</h1>
+            <p>MacBook comes with a different way to experience a trackpad. The Force Touch trackpad is engineered to deliver a responsive, uniform click no matter where you press the surface. And underneath, force sensors detect how much pressure you’re applying. You can now use a Force click to enable useful capabilities, like quickly looking up the definition of a word or previewing a file just by clicking and continuing to press the trackpad. You’ll also experience haptic feedback — a tactile vibration from the trackpad that adds the sense of touch to what you see on the screen. These advanced capabilities work in addition to all the intuitive Multi-Touch gestures Mac users love. You’ll be more in touch with your Mac than ever before. Without lifting a finger. <span>Learn more about Design ></span></p>
+        </div>
+        <div class="wireless">
+            <div class="img">
+                <img src="./../../assets/apple-img/mac/macbook/overview_wireless_large_2x.jpg"/>
+            </div>
+            <div class="line"></div>
+            <h1>Fully equipped for a wireless world.</h1>
+            <p>MacBook is designed to fit effortlessly into our increasingly wireless world. Just about anything you do with a notebook can now be done over the air, thanks to Apple software that takes full advantage of the latest Wi-Fi and Bluetooth wireless technology. So no matter where you are, you can connect to the web, transfer files, organize your photos, listen to music, and more — without being tied down.<br><span>Learn more about Wireless ></span></p>
+            <div class="icons">
+                <ul>
+                    <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_icloud_large_2x.jpg"/></li>
+                    <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_airdrop_large_2x.jpg"/></li>
+                    <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_bluetooth_audio_large_2x.jpg"/></li>
+                    <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_airplay_large_2x.jpg"/></li>
+                    <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_airdrop_large_2x.jpg"/></li>
+                    <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_appstore_large_2x.jpg"/></li>
+                    <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_print_large_2x.jpg"/></li>
+                    <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_time_machine_large_2x.jpg"/></li>
+                </ul>
+                
             </div>
         </div>
     </section>
@@ -245,6 +268,50 @@
         }
         .line{
             border-color: #CCCCCC;
+        }
+    }
+    .wireless{
+        .img{
+            width: 900px;
+            padding-bottom: 100px;
+            border-top: 1px solid gray;
+            margin: auto;
+
+            img{
+                width: 100%;
+            }
+        }
+        p{
+            font-size: 17px;
+            width: 900px;
+
+            span{
+                color: #0070C9;
+                cursor: pointer;
+            }
+        }
+        .icons{
+            margin: auto;
+            width: 600px;
+            padding-top: 90px;
+
+            ul{
+                width: 100%;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                li{
+                    &:first-child{
+                        margin-left: -40px;
+                    }
+                }
+            }
+            img{
+                width: 50px;
+            }
         }
     }
 </style>
