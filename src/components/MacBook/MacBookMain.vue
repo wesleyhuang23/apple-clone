@@ -63,7 +63,14 @@
                     <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_print_large_2x.jpg"/></li>
                     <li><img src="./../../assets/apple-img/mac/macbook/overview_icon_time_machine_large_2x.jpg"/></li>
                 </ul>
-                
+            </div>
+        </div>
+        <div class="usbc">
+            <div class="line"></div>
+            <h1>USB-C. <br> Singularly versatile.</h1>
+            <p>As long as we were including a port for charging your MacBook, we wanted to make sure it was the most advanced and versatile one available. The USB-C port puts just about everything you need in a port all in one place. This amazing port provides charging, speedy USB 3 data transfer, and video output in a reversible design that’s one-third the size of a USB 3 port, giving you the flexibility to easily connect your favorite devices.<br><br><span>Learn more about Design ></span></p>
+            <div class="img">
+                <img src="./../../assets/apple-img/mac/macbook/design_port_large_2x.jpg"/>
             </div>
         </div>
     </section>
@@ -311,6 +318,22 @@
             }
             img{
                 width: 50px;
+            }
+        }
+    }
+    .usbc{
+        p{
+            font-size: 17px;
+            span{
+                color: #0070C9;
+                cursor: pointer;
+            }
+        }
+        .img{
+            width: 115vw;
+
+            img{
+                width: 100%;
             }
         }
     }
