@@ -72,11 +72,60 @@
             <div class="img">
                 <img src="./../../assets/apple-img/mac/macbook/design_port_large_2x.jpg"/>
             </div>
+            <div class="usbc-icons">
+                <figure>
+                    <img src="./../../assets/apple-img/mac/macbook/usb_type_c_large_2x.png" style="transform: scale(.5);"/>
+                    <br>
+                    <br>
+                    <figcaption>USB-C</figcaption>
+                </figure>
+                <div class="half-tree"></div>
+                <div class="tree"></div>
+                <aside>
+                    <figure>
+                        <img src="./../../assets/apple-img/mac/macbook/charging_icon_large_2x.png" style="padding-bottom:10px;"/>
+                        <br>
+                        <br>
+                        <figcaption>{{usbc[0] | uppercase}}</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./../../assets/apple-img/mac/macbook/displays_icon_large_2x.png"/>
+                        <figcaption>{{usbc[1] | uppercase}}</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./../../assets/apple-img/mac/macbook/storage_icon_large_2x.png"/>
+                        <figcaption>{{usbc[2] | uppercase}}</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./../../assets/apple-img/mac/macbook/devices_icon_large_2x.png"/>
+                        <figcaption>{{usbc[3] | uppercase}}</figcaption>
+                    </figure>
+                </aside>
+                <h1>The capability to connect to everything you need.</h1>
+                <p>We gave a lot of consideration to the way MacBook connects to peripherals and power. We chose USB-C for its compact design and versatility. This single port lets you connect your charger; HDMI, DisplayPort, and VGA displays; USB devices like external drives; and your iPhone or iPad. All of which goes to show that sometimes less really is more.</p>
+                <div class="img">
+                    <img src="./../../assets/apple-img/mac/macbook/usbc_av_large_2x.jpg"/>
+                    <p>A range of accessories lets you connect virtually any device to your MacBook. For instance, the USB-C Digital AV Multiport Adapter lets you connect your MacBook to an HDMI display, as well as a standard USB device and a USB-C charging cable.</p>
+                </div>
+            </div>
         </div>
     </section>
 </template>
 
 <script>
+export default {
+    name: 'main',
+    data () {
+        return {
+            usbc: ['charging', 'displays', 'storage', 'devices'],
+        }
+    },
+    filters: {
+        uppercase: function(value){
+            return value.toUpperCase();
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -329,11 +378,81 @@
                 cursor: pointer;
             }
         }
+        .half-tree{
+            margin-top: 30px;
+            width: 400px;
+            height: 30px;
+            border-right: 1px solid #DED7CC;
+        }
+        .tree{
+            margin: auto;
+            width: 800px;
+            height: 30px;
+            border-top: 1px solid #DED7CC;
+            border-left: 1px solid #DED7CC;
+            border-right: 1px solid #DED7CC;
+        }
         .img{
             width: 115vw;
 
             img{
                 width: 100%;
+            }
+        }
+        .usbc-icons{
+            margin: auto;
+            width: 800px;
+
+            figure{
+                margin: auto;
+
+                &:first-child{
+                    text-align: center;
+                    font-size: 15px;
+                }
+            }
+
+            figcaption{
+                color: #BDB099;
+            }
+
+            aside{
+                display: flex;
+                flex-direction: row;
+
+                figure{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+
+                    img{
+                        transform: scale(.5);
+                    }
+                }
+            }
+            h1{
+                padding-bottom: 20px;
+                font-size: 30px;
+            }
+            p{
+                padding-bottom: 100px;
+            }
+            .img{
+                width: 550px;
+                margin: auto;
+
+                p{
+                    width: 600px;
+                    font-size: 15px;
+                    padding-top: 40px;
+                    margin-left: -50px;
+                    line-height: 20px;
+
+                }
+                img{
+                    width: 100%;
+                }
             }
         }
     }
