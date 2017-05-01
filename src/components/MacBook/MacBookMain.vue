@@ -109,6 +109,25 @@
                 </div>
             </div>
         </div>
+        <div class="fanless">
+            <div class="line"></div> 
+            <h1>Quietly astonishing.</h1>
+            <p>MacBook has been engineered from the ground up for silent, efficient performance. It includes sixth-generation Intel Core M processors that run on just 5 watts of power, made even more efficient by optimizations throughout macOS. Together the processor and macOS sip so little energy that the system generates very little heat, so no fan is required to cool the computer. That means when your MacBook is working, you won’t hear a thing. And the logic board on which the processor sits has been painstakingly engineered to pack all the capability you expect in a Mac into as little space as possible. <br> <span>Learn more about Design ></span></p>
+            <div class="img">
+                <img src="./../../assets/apple-img/mac/macbook/internals_layer_end_large_2x.jpg"/>
+                <img v-bind:class="battery" id="internal" src="./../../assets/apple-img/mac/macbook/internals_layer_start_large_2x.jpg"/>  
+            </div>
+            <h4>Measurably faster.</h4>
+            <p>MacBook features sixth-generation Intel Core m3, m5, and m7 processors with speeds of up to 1.3GHz and up to 25 percent faster graphics. It also comes with faster 1866MHz memory. So your MacBook is quicker and more responsive.</p>
+        </div>
+        <div class="battery">
+            <div class="wrapper">
+            <div class="line"></div>
+            <h1>All-day battery life. <br> Now even longer.</h1>
+            <p>With the slim MacBook enclosure, all-day battery life simply would not be achievable using traditional rectangular batteries. So we developed our own battery technology specifically designed to make use of every last millimeter of available space. The result is a terraced, contoured battery design that not only fits perfectly inside the incredibly slim MacBook, but also is unlike anything seen before in a notebook. And now, thanks to more efficient processors and improved battery chemistry, battery life has been extended by an hour.
+            <br><span>Learn more about Design ></span></p>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -118,12 +137,29 @@ export default {
     data () {
         return {
             usbc: ['charging', 'displays', 'storage', 'devices'],
+            battery: '',
+        }
+    },
+    methods: {
+        handleScroll () {
+            this.scrolled = window.scrollY;
+            // console.log(this.scrolled);
+            if(this.scrolled > 9333){
+                this.battery = 'hidden';
+                console.log(this.battery);
+            }
         }
     },
     filters: {
         uppercase: function(value){
             return value.toUpperCase();
         }
+    },
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
     }
 }
 </script>
@@ -455,5 +491,74 @@ export default {
                 }
             }
         }
+    }
+    .fanless{
+        h4{
+            text-align: center;
+            font-size: 30px;
+            font-weight: lighter;
+        }
+         p{
+            font-size: 17px;
+            line-height: 30px;
+            padding-bottom: 50px;
+
+            span{
+                color: #0070C9;
+                cursor: pointer;
+            }
+
+            &:nth-child(2){
+                font-size: 15px;
+            }
+        }
+        .img{
+            position: relative;
+            margin: auto;
+            width: 900px;
+            height: 650px;
+
+            img{
+                position: absolute;
+                width: 100%;
+                visibility: visible;
+                transition: visibility 2s;
+            }
+            #internal{
+                opacity: 1;
+                transition: opacity 2s;
+            }
+            #internal.hidden{
+                opacity: 0;
+            }
+        }
+    }
+    .battery{
+        .wrapper{
+            width: 1000px;
+            margin-left: 150px;
+
+             h1{
+                font-size: 40px;
+                text-align: left;
+            }
+            .line{
+                margin: 0px;
+            }
+            p{
+                text-align: left;
+                margin: 0px;
+                font-size: 15px;
+                width: 570px;
+
+                span{
+                    font-size: 14px;
+                    color: #0070C9;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+       
     }
 </style>
