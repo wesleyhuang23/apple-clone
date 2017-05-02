@@ -126,6 +126,14 @@
             <h1>All-day battery life. <br> Now even longer.</h1>
             <p>With the slim MacBook enclosure, all-day battery life simply would not be achievable using traditional rectangular batteries. So we developed our own battery technology specifically designed to make use of every last millimeter of available space. The result is a terraced, contoured battery design that not only fits perfectly inside the incredibly slim MacBook, but also is unlike anything seen before in a notebook. And now, thanks to more efficient processors and improved battery chemistry, battery life has been extended by an hour.
             <br><span>Learn more about Design ></span></p>
+            <div class="img">
+                <img src="./../../assets/apple-img/mac/macbook/overview_battery_base_large_2x.jpg"/>
+                <img src="./../../assets/apple-img/mac/macbook/overview_battery_1a_large_2x.png"/>
+                <img src="./../../assets/apple-img/mac/macbook/overview_battery_1b_large_2x.png"/>
+                <img src="./../../assets/apple-img/mac/macbook/overview_battery_2b_large_2x.png"/>
+                <img src="./../../assets/apple-img/mac/macbook/overview_battery_2a_large_2x.png"/>
+                
+            </div>
             </div>
         </div>
     </section>
@@ -557,8 +565,41 @@ export default {
                     cursor: pointer;
                 }
             }
+            .img{
+                width: 900px;
+                position: relative;
+                padding-top: 100px;
+
+                img{
+                    position: absolute;
+                    width: 400px;
+
+                   &:first-child{
+                       width: 900px;
+                       position: relative;
+                   }
+                   &:nth-child(2){
+                       top: 235px;
+                       left: 80px;
+                       width: 450px;
+                   }
+                   &:nth-child(3){
+                       width: 350px;
+                       top: 235px;
+                       left: 137px;
+                   }
+                   &:nth-child(4){
+                       width: 475px;
+                       top: 114px;
+                       left: 355px;
+                   }
+                   &:nth-child(5){
+                       width: 350px;
+                       top: 113px;
+                       left: 379px;
+                   }
+                }
+            }
         }
-        
-       
     }
 </style>
