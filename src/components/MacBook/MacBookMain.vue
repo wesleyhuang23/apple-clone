@@ -115,7 +115,7 @@
             <p>MacBook has been engineered from the ground up for silent, efficient performance. It includes sixth-generation Intel Core M processors that run on just 5 watts of power, made even more efficient by optimizations throughout macOS. Together the processor and macOS sip so little energy that the system generates very little heat, so no fan is required to cool the computer. That means when your MacBook is working, you won’t hear a thing. And the logic board on which the processor sits has been painstakingly engineered to pack all the capability you expect in a Mac into as little space as possible. <br> <span>Learn more about Design ></span></p>
             <div class="img">
                 <img src="./../../assets/apple-img/mac/macbook/internals_layer_end_large_2x.jpg"/>
-                <img v-bind:class="battery" id="internal" src="./../../assets/apple-img/mac/macbook/internals_layer_start_large_2x.jpg"/>  
+                <img class="internal" :id="battery" src="./../../assets/apple-img/mac/macbook/internals_layer_start_large_2x.jpg"/>  
             </div>
             <h4>Measurably faster.</h4>
             <p>MacBook features sixth-generation Intel Core m3, m5, and m7 processors with speeds of up to 1.3GHz and up to 25 percent faster graphics. It also comes with faster 1866MHz memory. So your MacBook is quicker and more responsive.</p>
@@ -142,11 +142,56 @@
                 </div>
             </div>
         </div>
+        <div class="macos">
+            <div class="left"> 
+                <div>
+                    <div class="line"> </div>
+                    <h1>macOS</h1>
+                    <p>macOS is the operating system that powers everything you do on a Mac. macOS Sierra introduces Siri to Mac — along with new ways to enjoy your photos, shop more securely online, and work more seamlessly between devices. <br><span>Learn more about macOS ></span></p>
+                </div>
+                <div class="img">
+                    <img src="./../../assets/apple-img/mac/macbook/overview_osx_large_2x.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div class="built-in">
+            <div class="line"></div> 
+            <h1>Built-in Apps</h1>
+            <p>Every Mac comes with apps for creativity and apps for productivity. It also comes with a collection of great apps for things you do every day, like surﬁng the web, sending mail and messages, and organizing your calendar. It even comes with an app for finding new apps. Your Mac is more than full‑featured, it’s fully loaded.</p>
+            <div class="img"> 
+                <img src="./../../assets/apple-img/mac/macbook/overview_builtinapps_shadow_large_2x.png"/>
+                <img src="./../../assets/apple-img/mac/macbook/overview_builtinapps_large_2x.jpg"/>
+            </div>
+        </div>
+        <div class="design">
+            <div class="wrapper">
+                <h1>Pure invention.</h1>
+                <span>Learn more about the <br> design of MacBook ></span>
+            </div>
+        </div>
+        <div class="buy">
+            <div class="buy-content">
+                <div class="img">
+                    <img src="./../../assets/apple-img/mac/macbook/buystrip_macbook_large_2x.png"/>
+                </div>
+                <div class="right"> 
+                    <h1>MacBook</h1>
+                    <p>Starting at $1299</p>
+                    <span> Compare Mac notebooks ></span>
+                </div>
+            </div>
+            <options></options>
+        </div>
     </section>
 </template>
 
 <script>
+import options from './options.vue';
+
 export default {
+    components: {
+        options,
+    },
     name: 'main',
     data () {
         return {
@@ -300,7 +345,8 @@ export default {
             width: 100%;
             position: relative;
             background-image: url('./../../assets/apple-img/Mac/macbook/overview_retina_large_2x.jpg');
-            background-size: 100% 100%;
+            background-size: 1800px;
+            background-repeat: no-repeat;
             background-position: center;
         }
         .section-content{
@@ -545,22 +591,24 @@ export default {
             img{
                 position: absolute;
                 width: 100%;
-                visibility: visible;
-                transition: visibility 2s;
             }
-            #internal{
+            .internal{
                 opacity: 1;
-                transition: opacity 2s;
+                transition: opacity 3s;
+                transition-delay: .7s;
+                -webkit-transition: visibility 2s;
             }
-            #internal.hidden{
+            #hidden{
                 opacity: 0;
             }
         }
     }
     .battery{
+        padding-bottom: 200px;
+
         .wrapper{
             width: 1000px;
-            margin-left: 250px;
+            margin: auto;
 
              h1{
                 font-size: 40px;
@@ -663,6 +711,134 @@ export default {
                             letter-spacing: 2px;
                         }
                     }
+                }
+            }
+        }
+    }
+    .macos{
+        padding-bottom: 150px;
+        .left{
+            width: 1200px;
+            display: flex;
+            margin: auto;
+
+
+            .line{
+                margin: 0px;
+            }
+            h1{
+                text-align: left;
+            }
+            
+            p{
+                text-align: left;
+                margin: 0px;
+                width: 400px;
+                font-size: 16px;
+
+                span{
+                    color: #0070C9;
+                    cursor: pointer;
+                }
+            }
+            .img{
+                width: 1000px;
+                margin-left: -350px;
+                margin-top: -200px;
+                position: relative;
+                z-index: -1;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .built-in{
+        padding-bottom: 100px;
+        p{
+            padding-bottom: 70px;
+        }
+        .img{
+            width: 1200px;
+            height: 200px;
+            overflow: hidden;
+            margin: auto;
+
+            img{
+                width: 100%;
+
+                &:first-child{
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &:last-child{
+                    margin-top: -200px;
+                }
+            }
+        }
+    }
+    .design{
+        height: 85vh;
+        background-image: url('./../../assets/apple-img/mac/macbook/overview_design_large_2x.jpg');
+        background-size: 1919px 838px;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            h1{
+                font-weight: lighter;
+            }
+            span{
+                text-align: center;
+                font-size: 17px;
+                cursor: pointer;
+                color: #0070C9;
+                font-weight: lighter;
+            }
+        }
+    }
+    .buy{
+        background-color:  #F2F2F2;
+
+        .buy-content{
+            margin: auto;
+            width: 600px;
+            display: flex;
+            align-items: center;
+            padding-top: 60px;
+
+
+            .img{
+                width:300px;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .right{
+                text-align: center;
+                width: 250px;
+
+                h1{
+                    font-size: 30px;
+                    margin: 0px;
+                    padding: 0px;
+                }
+                p{
+                    width: 250px;
+                }
+                span{
+                    color:#0070C9;
+                    cursor: pointer;
                 }
             }
         }

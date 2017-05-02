@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
   *{
     margin: 0;
-    font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial", sans-serif;
+    font-family: Helvetica, sans-serif
   }
   .carousel-indicators{
     display: flex;
