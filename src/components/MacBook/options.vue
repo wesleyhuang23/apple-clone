@@ -28,6 +28,9 @@
                 </li>
             </ul>
         </div>
+        <div class="battery-life">
+            <p>* Battery life varies by use and configuration. See <a href="#">www.apple.com/batteries</a> for more information.</p>
+        </div>
     </section>
 </template>
 
@@ -47,6 +50,7 @@
             margin: auto;
             width: 900px;
             padding-top: 50px;
+            padding-bottom: 20px;
 
             ul{
                 display: flex;
@@ -67,6 +71,21 @@
                         color: #0070C9;
                     }
                 }
+            }
+        }
+        .battery-life{
+            margin: auto;
+            width: 900px;
+            border-top: 1px solid #D6D6D6;
+            border-bottom: 1px solid #D6D6D6;
+            display: flex;
+            align-items: center;
+            color: gray;
+            font-weight: lighter;
+            font-size: 10px;
+            p{
+                margin: 0px;
+                padding: 10px;
             }
         }
     }
