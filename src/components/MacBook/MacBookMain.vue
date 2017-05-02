@@ -122,18 +122,17 @@
         </div>
         <div class="battery">
             <div class="wrapper">
-            <div class="line"></div>
-            <h1>All-day battery life. <br> Now even longer.</h1>
-            <p>With the slim MacBook enclosure, all-day battery life simply would not be achievable using traditional rectangular batteries. So we developed our own battery technology specifically designed to make use of every last millimeter of available space. The result is a terraced, contoured battery design that not only fits perfectly inside the incredibly slim MacBook, but also is unlike anything seen before in a notebook. And now, thanks to more efficient processors and improved battery chemistry, battery life has been extended by an hour.
-            <br><span>Learn more about Design ></span></p>
-            <div class="img">
-                <img src="./../../assets/apple-img/mac/macbook/overview_battery_base_large_2x.jpg"/>
-                <img src="./../../assets/apple-img/mac/macbook/overview_battery_1a_large_2x.png"/>
-                <img src="./../../assets/apple-img/mac/macbook/overview_battery_1b_large_2x.png"/>
-                <img src="./../../assets/apple-img/mac/macbook/overview_battery_2b_large_2x.png"/>
-                <img src="./../../assets/apple-img/mac/macbook/overview_battery_2a_large_2x.png"/>
-                
-            </div>
+                <div class="line"></div>
+                <h1>All-day battery life. <br> Now even longer.</h1>
+                <p>With the slim MacBook enclosure, all-day battery life simply would not be achievable using traditional rectangular batteries. So we developed our own battery technology specifically designed to make use of every last millimeter of available space. The result is a terraced, contoured battery design that not only fits perfectly inside the incredibly slim MacBook, but also is unlike anything seen before in a notebook. And now, thanks to more efficient processors and improved battery chemistry, battery life has been extended by an hour.
+                <br><span>Learn more about Design ></span></p>
+                <div class="img">
+                    <img src="./../../assets/apple-img/mac/macbook/overview_battery_base_large_2x.jpg"/>
+                    <img class="onea" :id="one" src="./../../assets/apple-img/mac/macbook/overview_battery_1a_large_2x.png"/>
+                    <img class="oneb" :id="oneb" src="./../../assets/apple-img/mac/macbook/overview_battery_1b_large_2x.png"/>
+                    <img class="twob" :id="two" src="./../../assets/apple-img/mac/macbook/overview_battery_2a_large_2x.png"/>
+                    <img class="twoa" :id="twob" src="./../../assets/apple-img/mac/macbook/overview_battery_2b_large_2x.png"/>
+                </div>
             </div>
         </div>
     </section>
@@ -146,21 +145,31 @@ export default {
         return {
             usbc: ['charging', 'displays', 'storage', 'devices'],
             battery: '',
+            one: '',
+            two: '',
+            oneb: '',
+            twob: ''
         }
     },
     methods: {
         handleScroll () {
             this.scrolled = window.scrollY;
             // console.log(this.scrolled);
-            if(this.scrolled > 9333){
+            if(this.scrolled > 9333){ // animation for battery cells to disapear when scrolled to location
                 this.battery = 'hidden';
-                console.log(this.battery);
+                // console.log(this.battery);
+            }
+            if(this.scrolled > 10390){ //animation for battery cells to float
+                this.one = 'one';
+                this.two = 'two';
+                this.oneb = 'oneb';
+                this.twob = 'twob';
             }
         }
     },
     filters: {
         uppercase: function(value){
-            return value.toUpperCase();
+            return value.toUpperCase(); //makes title uppercase using filters
         }
     },
     created () {
@@ -565,11 +574,48 @@ export default {
                     cursor: pointer;
                 }
             }
+            
             .img{
                 width: 900px;
                 position: relative;
                 padding-top: 100px;
 
+                .onea{
+                    top: 235px;
+                    left: 80px;
+                    width: 450px;
+                    transition: top 2s;
+                }
+                .oneb{
+                    width: 350px;
+                    top: 235px;
+                    left: 137px;
+                    transition: top 2s;
+                }
+                .twob{
+                    width: 475px;
+                    top: 114px;
+                    left: 319px;
+                    transition: top 2s;
+                }
+                .twoa{
+                    width: 350px;
+                    top: 113px;
+                    left: 408px;
+                    transition: top 2s;
+                }
+                #one{
+                    top: 205px;
+                }
+                #two{
+                    top: 83px;
+                }
+                #oneb{
+                    top: 175px;
+                }
+                #twob{
+                    top: 53px;
+                }
                 img{
                     position: absolute;
                     width: 400px;
@@ -577,26 +623,6 @@ export default {
                    &:first-child{
                        width: 900px;
                        position: relative;
-                   }
-                   &:nth-child(2){
-                       top: 235px;
-                       left: 80px;
-                       width: 450px;
-                   }
-                   &:nth-child(3){
-                       width: 350px;
-                       top: 235px;
-                       left: 137px;
-                   }
-                   &:nth-child(4){
-                       width: 475px;
-                       top: 114px;
-                       left: 355px;
-                   }
-                   &:nth-child(5){
-                       width: 350px;
-                       top: 113px;
-                       left: 379px;
                    }
                 }
             }
