@@ -8,8 +8,8 @@
             <p id="film">Watch the Design film</p>
             <p>Our goal with MacBook was to do the impossible: engineer a full‑size experience into the lightest and most compact Mac notebook ever. That meant reimagining every element to make it not only lighter and thinner but also better. The result is more than just a new notebook. It’s the future of the notebook. And now, with sixth‑generation Intel processors, improved graphics performance, faster flash storage, and up to 10 hours of battery life,* MacBook is even more capable.</p>
             <div class="badge-content">
-                <p><span>13.1 <span>mm</span></span><br> THIN</p>
-                <p><span>2 <span>Ib</span></span> <br>LIGHT</p> 
+                <p><span>13.1 <span style="margin-left: -20px;">mm</span></span><br> THIN</p>
+                <p><span>2 <span style="margin-left: -15px;">Ib</span></span> <br>LIGHT</p> 
                 <p><span>12<span>-inch</span></span><br> RETINA DISPLAY</p> 
                 <p><span>10<span> hours</span></span><br> BATTERY LIFE*</p> 
             </div>
@@ -207,6 +207,14 @@ export default {
         handleScroll () {
             this.scrolled = window.scrollY;
             // console.log(this.scrolled);
+            if(this.scrolled > 100){
+                let specs = document.getElementsByClassName('badge-content')[0];
+                for(let i = 0; i < specs.children.length; i++){
+                    setTimeout(function(){
+                        specs.children[i].id = 'is-showing';
+                    }, 150 * (i + 1));
+                }
+            }
             if(this.scrolled > 9300){ // animation for battery cells to disapear when scrolled to location
                 this.battery = 'hidden';
                 // console.log(this.battery);
@@ -275,6 +283,10 @@ export default {
             width: 100%;
         }
     }
+    #is-showing{
+        opacity: 1;
+        transform: translateX(0px);
+    }
     .badge-content{
         display: flex;
         flex-direction: row;
@@ -283,11 +295,15 @@ export default {
         padding-top: 50px;
         padding-bottom: 90px;
         padding-left: 60px;
+        
 
         p{
             font-weight: lighter;
             text-align: left;
             font-size: 15px;
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 1s ease-in-out;
             // border: 1px solid green;
 
             &:nth-child(2){
