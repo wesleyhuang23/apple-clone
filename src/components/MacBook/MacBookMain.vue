@@ -124,8 +124,15 @@
             <div class="wrapper">
                 <div class="line"></div>
                 <h1>All-day battery life. <br> Now even longer.</h1>
-                <p>With the slim MacBook enclosure, all-day battery life simply would not be achievable using traditional rectangular batteries. So we developed our own battery technology specifically designed to make use of every last millimeter of available space. The result is a terraced, contoured battery design that not only fits perfectly inside the incredibly slim MacBook, but also is unlike anything seen before in a notebook. And now, thanks to more efficient processors and improved battery chemistry, battery life has been extended by an hour.
-                <br><span>Learn more about Design ></span></p>
+                <div class="second-row">
+                    <p>With the slim MacBook enclosure, all-day battery life simply would not be achievable using traditional rectangular batteries. So we developed our own battery technology specifically designed to make use of every last millimeter of available space. The result is a terraced, contoured battery design that not only fits perfectly inside the incredibly slim MacBook, but also is unlike anything seen before in a notebook. And now, thanks to more efficient processors and improved battery chemistry, battery life has been extended by an hour.
+                    <br><span>Learn more about Design ></span></p>
+                    <div class="badge-content-battery">
+                        <span class="badge-small">UP TO</span>
+                        <span class="badge-large">10<span class="badge-half">hrs</span></span>
+                        <span class="badge-half">BATTERY LIFE*</span>
+                    </div>
+                </div>
                 <div class="img">
                     <img src="./../../assets/apple-img/mac/macbook/overview_battery_base_large_2x.jpg"/>
                     <img class="onea" :id="one" src="./../../assets/apple-img/mac/macbook/overview_battery_1a_large_2x.png"/>
@@ -155,11 +162,11 @@ export default {
         handleScroll () {
             this.scrolled = window.scrollY;
             // console.log(this.scrolled);
-            if(this.scrolled > 9333){ // animation for battery cells to disapear when scrolled to location
+            if(this.scrolled > 9300){ // animation for battery cells to disapear when scrolled to location
                 this.battery = 'hidden';
                 // console.log(this.battery);
             }
-            if(this.scrolled > 10390){ //animation for battery cells to float
+            if(this.scrolled > 10300){ //animation for battery cells to float
                 this.one = 'one';
                 this.two = 'two';
                 this.oneb = 'oneb';
@@ -553,7 +560,7 @@ export default {
     .battery{
         .wrapper{
             width: 1000px;
-            margin-left: 150px;
+            margin-left: 250px;
 
              h1{
                 font-size: 40px;
@@ -579,27 +586,28 @@ export default {
                 width: 900px;
                 position: relative;
                 padding-top: 100px;
+                margin-left: -120px;
 
                 .onea{
                     top: 235px;
                     left: 80px;
-                    width: 450px;
+                    width: 470px;
                     transition: top 2s;
                 }
                 .oneb{
-                    width: 350px;
+                    width: 370px;
                     top: 235px;
                     left: 137px;
                     transition: top 2s;
                 }
                 .twob{
-                    width: 475px;
+                    width: 495px;
                     top: 114px;
                     left: 319px;
                     transition: top 2s;
                 }
                 .twoa{
-                    width: 350px;
+                    width: 370px;
                     top: 113px;
                     left: 408px;
                     transition: top 2s;
@@ -624,6 +632,37 @@ export default {
                        width: 900px;
                        position: relative;
                    }
+                }
+            }
+            .second-row{
+                width: 900px;
+                display: flex;
+
+                .badge-content-battery{
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: lighter;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: 170px;
+
+                    .badge-large{
+                        color: #BDB099;
+                        font-weight: lighter;
+                        font-size: 70px;
+
+                        .badge-half{
+                            font-size: 40px;
+                        }
+                    }
+                    span{
+                        &:first-child{
+                            letter-spacing: 3px;
+                        }
+                        &:last-child{
+                            letter-spacing: 2px;
+                        }
+                    }
                 }
             }
         }

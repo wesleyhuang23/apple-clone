@@ -50,11 +50,14 @@
            font-weight: lighter;
 
            &:last-child{
-               background-color: #1680D5;
+               background-color: #2189db;
+               background: linear-gradient(#42a1ec, #0070c9);
+               border-color: #07c;
                color: white;
                text-align: center;
                border-radius: 5px;
                width: 40px;
+               text-shadow: 0 1px 1px rgba(28,115,184,0.64);
            }
         }
     }
