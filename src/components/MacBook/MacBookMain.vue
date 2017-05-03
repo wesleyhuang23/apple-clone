@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="nopad">
-            <figure>
+            <figure id="colors">
             </figure>
             <figcaption>Available in silver, gold, space gray, and all-new rose gold.</figcaption>
         </div>
@@ -200,7 +200,9 @@ export default {
             one: '',
             two: '',
             oneb: '',
-            twob: ''
+            twob: '',
+            backgroundPositionX: -250,
+            backgroundPositionY: 100,
         }
     },
     methods: {
@@ -214,6 +216,12 @@ export default {
                         specs.children[i].id = 'is-showing';
                     }, 150 * (i + 1));
                 }
+            }
+            if(this.scrolled > 100){
+                let colors = document.getElementById('colors');
+                console.log(this.scrolled / 10 - 100);
+                colors.style.backgroundPosition = "-450px " + (this.scrolled / 10 - 200) + "px";
+                colors.style.transition = 'all .2s ease-in-out';
             }
             if(this.scrolled > 9300){ // animation for battery cells to disapear when scrolled to location
                 this.battery = 'hidden';
@@ -242,6 +250,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    #is-showing{
+        opacity: 1;
+        transform: translateX(0px);
+    }
     .line{
         padding-top: 50px;
         width: 50px;
@@ -282,10 +294,6 @@ export default {
         img{
             width: 100%;
         }
-    }
-    #is-showing{
-        opacity: 1;
-        transform: translateX(0px);
     }
     .badge-content{
         display: flex;
@@ -328,8 +336,9 @@ export default {
         figure{
             // border: 1px solid green;
             background-image: url("https://images.apple.com/v/macbook/e/overview/images/overview_colors_large_2x.jpg");
-            background-position: center;
-            background-size: cover;
+            background-size: 2560px 1183px;
+            background-repeat: no-repeat;
+            background-position: -450px;
             position: relative;
             overflow: hidden;
             width: 100%;
@@ -610,9 +619,8 @@ export default {
             }
             .internal{
                 opacity: 1;
-                transition: opacity 3s;
+                transition: all 3s ease-in-out;
                 transition-delay: .7s;
-                -webkit-transition: visibility 2s;
             }
             #hidden{
                 opacity: 0;
