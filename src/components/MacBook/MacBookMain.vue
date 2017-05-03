@@ -46,10 +46,12 @@
             <p>MacBook comes with a different way to experience a trackpad. The Force Touch trackpad is engineered to deliver a responsive, uniform click no matter where you press the surface. And underneath, force sensors detect how much pressure you’re applying. You can now use a Force click to enable useful capabilities, like quickly looking up the definition of a word or previewing a file just by clicking and continuing to press the trackpad. You’ll also experience haptic feedback — a tactile vibration from the trackpad that adds the sense of touch to what you see on the screen. These advanced capabilities work in addition to all the intuitive Multi-Touch gestures Mac users love. You’ll be more in touch with your Mac than ever before. Without lifting a finger. <span>Learn more about Design ></span></p>
         </div>
         <div class="wireless">
+            <div class="line"></div>
             <div class="img">
                 <img src="./../../assets/apple-img/mac/macbook/overview_wireless_large_2x.jpg"/>
+                <img src="./../../assets/apple-img/mac/macbook/overview_wireless_bottom_shadow_large_2x.png"/>
             </div>
-            <div class="line"></div>
+            <div class="line" style="width: 50px; border-bottom: 1px solid gray;"></div>
             <h1>Fully equipped for a wireless world.</h1>
             <p>MacBook is designed to fit effortlessly into our increasingly wireless world. Just about anything you do with a notebook can now be done over the air, thanks to Apple software that takes full advantage of the latest Wi-Fi and Bluetooth wireless technology. So no matter where you are, you can connect to the web, transfer files, organize your photos, listen to music, and more — without being tied down.<br><span>Learn more about Wireless ></span></p>
             <div class="icons">
@@ -228,12 +230,24 @@ export default {
             }
             if(this.scrolled > 2700){
                 let retinaSpecs = document.getElementsByClassName('retina-specs')[0];
-                console.log(retinaSpecs);
+                // console.log(retinaSpecs);
                 for(let i = 0; i < retinaSpecs.childNodes.length; i++){
                     setTimeout(function(){
                         retinaSpecs.childNodes[i].id = 'is-showing';
                     }, 150 * (i + 1));
                 }
+            }
+            if(this.scrolled > 4515){
+                var wireless = document.getElementsByClassName('wireless')[0].children[1].children[0];
+                var shadow = document.getElementsByClassName('wireless')[0].children[1].children[1];
+                // console.log(wireless);
+                wireless.style.transform = 'translateY(' + (this.scrolled / 5 - 1200) + 'px)';
+                console.log(this.scrolled / 5 - 1200);
+                if(this.scrolled > 6019){
+                    wireless.style.transform = 'translateY(8px)'
+                }
+                shadow.style.opacity = this.scrolled / 3500 - 1;
+                wireless.style.transition = 'all .5s ease-in-out';
             }
             if(this.scrolled > 9300){ // animation for battery cells to disapear when scrolled to location
                 this.battery = 'hidden';
@@ -445,6 +459,9 @@ export default {
         }
     }
     .keyboard{
+        position: relative;
+        background-color: #FFFFFF;
+        z-index: 2;
         h1{
             width: 500px;
             font-size: 40px;
@@ -476,14 +493,33 @@ export default {
         }
     }
     .wireless{
+        .line{
+            position: relative;
+            top: -50px;
+            z-index: 3;
+            border-bottom: 1px solid #D6D6D6;
+            width: 1024px;
+        }
         .img{
-            width: 900px;
-            padding-bottom: 100px;
-            border-top: 1px solid gray;
+            width: 1024px;
+            position: relative;
+            padding-left: 50px;
+            padding-bottom: 200px;
+            padding-right: 50px;
             margin: auto;
+            z-index: 1;
 
             img{
                 width: 100%;
+                z-index: -1;
+
+                &:last-child{
+                    position: absolute;
+                    top: 700px;
+                    right: 380px;
+                    opacity: 0;
+                    z-index: 2;
+                }
             }
         }
         p{
