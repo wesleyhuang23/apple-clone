@@ -26,7 +26,7 @@
                 <h1>A Retina displat that takes everything to the edge.</h1>
                 <p>he moment you open your MacBook, its gorgeous 12-inch Retina display with edge-to-edge glass brings everything into focus. Every photo leaps off the screen in rich, vibrant detail. Over 3 million pixels render each letter with crystal clarity. And it all comes to light on the thinnest Retina display ever on a Mac, meticulously honed to deliver a bold visual experience within an impossibly minimal design.</p>
                 <span id="learn">Learn more about Design ></span>
-                <aside>
+                <aside class="retina-specs">
                     <div><span class="badge-large">12<span class="badge-half">-inch</span></span><span class="badge-small">RETINA DISPLAY</span></div>
                     <div><span class="badge-large">2304<span class="badge-half">x</span>1440</span><span class="badge-small">RESOLUTION</span></div>
                     <div><span class="badge-large">16:10</span><span class="badge-small">ASPECT RATION</span></div>
@@ -208,7 +208,7 @@ export default {
     methods: {
         handleScroll () {
             this.scrolled = window.scrollY;
-            // console.log(this.scrolled);
+            console.log(this.scrolled);
             if(this.scrolled > 100){
                 let specs = document.getElementsByClassName('badge-content')[0];
                 for(let i = 0; i < specs.children.length; i++){
@@ -218,10 +218,22 @@ export default {
                 }
             }
             if(this.scrolled > 100){
-                let colors = document.getElementById('colors');
-                console.log(this.scrolled / 10 - 100);
+                var colors = document.getElementById('colors');
+                // console.log(this.scrolled / 10 - 100);
                 colors.style.backgroundPosition = "-450px " + (this.scrolled / 10 - 200) + "px";
                 colors.style.transition = 'all .2s ease-in-out';
+            }
+            if(this.scrolled > 2137){
+                colors.style.backgroundPosition = "-450px 15.3px";
+            }
+            if(this.scrolled > 2700){
+                let retinaSpecs = document.getElementsByClassName('retina-specs')[0];
+                console.log(retinaSpecs);
+                for(let i = 0; i < retinaSpecs.childNodes.length; i++){
+                    setTimeout(function(){
+                        retinaSpecs.childNodes[i].id = 'is-showing';
+                    }, 150 * (i + 1));
+                }
             }
             if(this.scrolled > 9300){ // animation for battery cells to disapear when scrolled to location
                 this.battery = 'hidden';
@@ -310,7 +322,7 @@ export default {
             text-align: left;
             font-size: 15px;
             opacity: 0;
-            transform: translateX(30px);
+            transform: translateX(40px);
             transition: all 1s ease-in-out;
             // border: 1px solid green;
 
@@ -387,6 +399,12 @@ export default {
                 padding-top: 50px;
                 width: 700px;
                 justify-content: space-between;
+
+                div{
+                    opacity: 0;
+                    transform: translateX(50px);
+                    transition: all 1s ease-in-out;
+                }
             }
             div{
                 display: flex;
