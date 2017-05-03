@@ -241,13 +241,13 @@ export default {
                 var wireless = document.getElementsByClassName('wireless')[0].children[1].children[0];
                 var shadow = document.getElementsByClassName('wireless')[0].children[1].children[1];
                 // console.log(wireless);
-                wireless.style.transform = 'translateY(' + (this.scrolled / 5 - 1200) + 'px)';
-                console.log(this.scrolled / 5 - 1200);
-                if(this.scrolled > 6019){
-                    wireless.style.transform = 'translateY(8px)'
+                wireless.style.transform = 'translateY(' + (this.scrolled / 5 - 1400) + 'px)';
+                // console.log(this.scrolled / 5 - 1300);
+                if(this.scrolled > 6370){
+                    wireless.style.transform = 'translateY(-99px)'
                 }
-                shadow.style.opacity = this.scrolled / 3500 - 1;
-                wireless.style.transition = 'all .5s ease-in-out';
+                shadow.style.opacity = this.scrolled / 3500 - 1.2;
+                wireless.style.transition = 'all .3s ease-in-out';
             }
             if(this.scrolled > 9300){ // animation for battery cells to disapear when scrolled to location
                 this.battery = 'hidden';
@@ -504,7 +504,7 @@ export default {
             width: 1024px;
             position: relative;
             padding-left: 50px;
-            padding-bottom: 200px;
+            padding-bottom: 150px;
             padding-right: 50px;
             margin: auto;
             z-index: 1;
@@ -515,7 +515,7 @@ export default {
 
                 &:last-child{
                     position: absolute;
-                    top: 700px;
+                    top: 580px;
                     right: 380px;
                     opacity: 0;
                     z-index: 2;
