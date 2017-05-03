@@ -259,6 +259,16 @@ export default {
                 this.oneb = 'oneb';
                 this.twob = 'twob';
             }
+            if(this.scrolled > 10015){ //animation for battery life
+                let battery = document.getElementsByClassName('badge-content-battery')[0];
+                console.log(battery);
+                for(let i = 0; i < battery.children.length; i++){
+                    setTimeout(function(){
+                        battery.children[i].id = 'is-showing';
+                        battery.children[1].children[0].id = 'is-showing';
+                    }, 150 * (i + 1));
+                }
+            }
         }
     },
     filters: {
@@ -779,9 +789,18 @@ export default {
 
                         .badge-half{
                             font-size: 40px;
+                            opacity: 0;
                         }
                     }
                     span{
+                        opacity: 0;
+                        transform: translateX(40px);
+                        transition: all 2s ease-in-out;
+
+                        span{
+                            opacity: 0;
+                        }
+
                         &:first-child{
                             letter-spacing: 3px;
                         }
