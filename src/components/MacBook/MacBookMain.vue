@@ -237,7 +237,7 @@ export default {
                     }, 150 * (i + 1));
                 }
             }
-            if(this.scrolled > 4515){
+            if(this.scrolled > 4000){
                 var wireless = document.getElementsByClassName('wireless')[0].children[1].children[0];
                 var shadow = document.getElementsByClassName('wireless')[0].children[1].children[1];
                 // console.log(wireless);
@@ -261,13 +261,19 @@ export default {
             }
             if(this.scrolled > 10015){ //animation for battery life
                 let battery = document.getElementsByClassName('badge-content-battery')[0];
-                console.log(battery);
+                // console.log(battery);
                 for(let i = 0; i < battery.children.length; i++){
                     setTimeout(function(){
                         battery.children[i].id = 'is-showing';
                         battery.children[1].children[0].id = 'is-showing';
                     }, 150 * (i + 1));
                 }
+            }
+            if(this.scrolled > 10330){
+                let macOS = document.getElementsByClassName('left')[0].children[1].children[0];
+                macOS.style.transform = 'translateY(' + (11431 - this.scrolled) / 2.5 + 'px)';
+                macOS.style.transition = 'all .1s ease-in-out';
+                console.log(macOS);
             }
         }
     },
@@ -514,7 +520,6 @@ export default {
             width: 1024px;
             position: relative;
             padding-left: 50px;
-            padding-bottom: 150px;
             padding-right: 50px;
             margin: auto;
             z-index: 1;
@@ -525,7 +530,7 @@ export default {
 
                 &:last-child{
                     position: absolute;
-                    top: 580px;
+                    top: 550px;
                     right: 380px;
                     opacity: 0;
                     z-index: 2;
@@ -813,7 +818,6 @@ export default {
         }
     }
     .macos{
-        padding-bottom: 150px;
         .left{
             width: 1200px;
             display: flex;
@@ -847,6 +851,8 @@ export default {
 
                 img{
                     width: 100%;
+                    position: relative;
+                    top: 50px;
                 }
             }
         }
