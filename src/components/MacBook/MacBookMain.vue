@@ -237,7 +237,7 @@ export default {
                     }, 150 * (i + 1));
                 }
             }
-            if(this.scrolled > 4000){
+            if(this.scrolled > 4000){ //animation for wireless macbook showing
                 var wireless = document.getElementsByClassName('wireless')[0].children[1].children[0];
                 var shadow = document.getElementsByClassName('wireless')[0].children[1].children[1];
                 // console.log(wireless);
@@ -272,7 +272,7 @@ export default {
             if(this.scrolled > 10330){
                 let macOS = document.getElementsByClassName('left')[0].children[1].children[0];
                 macOS.style.transform = 'translateY(' + (11431 - this.scrolled) / 2.5 + 'px)';
-                macOS.style.transition = 'all .1s ease-in-out';
+                macOS.style.transition = 'all .5s ease-in-out';
                 console.log(macOS);
             }
         }
@@ -852,7 +852,7 @@ export default {
                 img{
                     width: 100%;
                     position: relative;
-                    top: 50px;
+                    top: -70px;
                 }
             }
         }
