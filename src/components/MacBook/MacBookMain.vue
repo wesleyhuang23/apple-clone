@@ -162,7 +162,7 @@
             <p>Every Mac comes with apps for creativity and apps for productivity. It also comes with a collection of great apps for things you do every day, like surﬁng the web, sending mail and messages, and organizing your calendar. It even comes with an app for finding new apps. Your Mac is more than full‑featured, it’s fully loaded.</p>
             <div class="img"> 
                 <img src="./../../assets/apple-img/mac/macbook/overview_builtinapps_shadow_large_2x.png"/>
-                <img src="./../../assets/apple-img/mac/macbook/overview_builtinapps_large_2x.jpg"/>
+                <img id="built-in" src="./../../assets/apple-img/mac/macbook/overview_builtinapps_large_2x.jpg"/>
             </div>
         </div>
         <div class="design">
@@ -210,7 +210,7 @@ export default {
     methods: {
         handleScroll () {
             this.scrolled = window.scrollY;
-            console.log(this.scrolled);
+            // console.log(this.scrolled);
             if(this.scrolled > 100){
                 let specs = document.getElementsByClassName('badge-content')[0];
                 for(let i = 0; i < specs.children.length; i++){
@@ -273,7 +273,13 @@ export default {
                 let macOS = document.getElementsByClassName('left')[0].children[1].children[0];
                 macOS.style.transform = 'translateY(' + (11431 - this.scrolled) / 2.5 + 'px)';
                 macOS.style.transition = 'all .5s ease-in-out';
-                console.log(macOS);
+                // console.log(macOS);
+            }
+            if(this.scrolled > 11605){
+                let apps = document.getElementById('built-in');
+                // console.log((this.scrolled - 11605 - 1000) / 20);
+                apps.style.transform = 'translateY(' + (this.scrolled - 11605 - 1000) / 20 + 'px)';
+                apps.style.transition = 'all .5s ease-in-out';
             }
         }
     },
@@ -818,6 +824,7 @@ export default {
         }
     }
     .macos{
+        margin-bottom: -100px;
         .left{
             width: 1200px;
             display: flex;
@@ -878,6 +885,8 @@ export default {
 
                 &:last-child{
                     margin-top: -200px;
+                    position: relative;
+                    top: -40px;
                 }
             }
         }
