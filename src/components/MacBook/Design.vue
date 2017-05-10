@@ -8,6 +8,12 @@
             <br>
             <p>We designed MacBook to be not only thinner and lighter, but more functional and intuitive than ever before. To do that, we couldn’t just shave a millimeter here, a gram there. So we started from scratch, reinventing each essential element as part of a singular, deceptively simple design. It’s everything there is to love about Mac. In its purest form ever.</p>
         </div>
+        <section class="front">
+            <div class="img">
+                <img src="./../../assets/apple-img/mac/macbook/design/design_360_static_large_2x.jpg"/>
+            </div>
+        </section>
+
     </section>
 </template>
 
@@ -28,6 +34,7 @@
         font-size: 23px;
     }
     .hero{
+
         h1{
             position: relative;
             top: -150px;
@@ -50,6 +57,23 @@
                 top: -350px;
                 left: 30px;
                 z-index: -1;
+            }
+        }
+    }
+    .front{
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F2F2F2;
+
+        .img{
+            width: 1200px;
+            height: 50px;
+
+            img{
+                width: 100%;
+                background-color: #F2F2F2;
             }
         }
     }
