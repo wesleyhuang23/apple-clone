@@ -298,16 +298,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    #is-showing{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-    .line{
-        padding-top: 50px;
-        width: 50px;
-        border-bottom: 1px solid gray;
-        margin: auto;
-    }
+    
     h1{
         text-align: center;
         font-weight: lighter;

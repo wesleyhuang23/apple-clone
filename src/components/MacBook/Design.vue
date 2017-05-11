@@ -13,7 +13,26 @@
                 <img src="./../../assets/apple-img/mac/macbook/design/design_360_static_large_2x.jpg"/>
             </div>
         </section>
-
+        <section class="keys">
+            <div class="line"></div>
+            <h1>A keyboard reimagined from <br> A to Z.</h1>
+            <p>From the beginning, our goal was to design a full, uncompromising Mac experience. And a full-size keyboard is an essential part of that. In order to fit a full-size keyboard in the incredibly thin MacBook, we designed the keyboard from the ground up. Each component has been rethought, from the underlying mechanism to the curvature of the surface of each key to the distinctive new typeface. The result is a keyboard dramatically thinner than its predecessor. Now when your finger strikes the key, it goes down and bounces back with a crisp, consistent motion that makes typing with precision a breeze.</p>
+            <div class="img">
+                <img src="./../../assets/apple-img/mac/macbook/design/design_keyboard_large_2x.jpg"/>
+            </div> 
+            <div class="butterfly">
+                <h2>Butterfly mechanism</h2>
+                <p>Traditional keyboards use a scissor mechanism, which tends to wobble around the edges. This creates a lack of precision when you strike anywhere except the center of the key. We needed to reduce key wobbling for a keyboard this thin; otherwise, striking a key off-center could result in the keycap hitting bottom before a keystroke registers. So we designed a unique butterfly mechanism, which is wider than the scissor mechanism and has a single assembly made from a stiffer material — allowing for a more stable, responsive key that takes up less vertical space. This innovative design improves stability, uniformity, and control — no matter where you press on the key.</p>
+            </div>
+            <div class="row">
+                <div class="traditional"> 
+                    <figure></figure>
+                </div>
+                <div class="new">
+                    <figure></figure>
+                </div>
+            </div>
+        </section>
     </section>
 </template>
 
@@ -25,6 +44,9 @@
         font-size: 50px;
         font-weight: lighter;
         text-align: center;
+    }
+    h2{
+        font-weight: lighter;
     }
     p{
         width: 800px;
@@ -75,6 +97,40 @@
                 width: 100%;
                 background-color: #F2F2F2;
             }
+        }
+    }
+    .keys{
+        padding-top: 110px;
+
+        .line{
+            margin-bottom: 50px;
+        }
+
+        h1{
+            font-weight: lighter;
+            margin-bottom: 33.8;
+            margin: auto;
+            text-align: center;
+        }
+
+        p{
+            text-align: left;
+            margin-top: 18px;
+            font-size: 17px;
+            margin-bottom: 100px;
+        }
+        .img{
+            width: 1200px;
+            margin:auto;
+
+            img{
+                width: 100%;
+            }
+        }
+        .butterfly{
+            margin-top: 100px;
+            width: 800px;
+            margin: auto;
         }
     }
 </style>

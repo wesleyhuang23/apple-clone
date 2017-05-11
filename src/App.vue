@@ -35,4 +35,14 @@ export default {
     color: inherit;
     text-decoration: none;
   }
+  #is-showing{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+  .line{
+      padding-top: 50px;
+      width: 50px;
+      border-bottom: 1px solid gray;
+      margin: auto;
+  }
 </style>
