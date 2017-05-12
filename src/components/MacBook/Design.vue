@@ -32,6 +32,24 @@
                     <figure></figure>
                 </div>
             </div>
+            <section class="keyboard-design">
+                <div class="key-design">
+                    <div class="info">
+                        <h2>Key Design</h2>
+                        <p>The redesigned keys on MacBook feature a larger surface area, a thinner construction, and a deeper curvature, creating a more defined space for your fingertip to naturally find and press the keys. These refinements may be subtle, but the feel is distinct and intuitive. Combined with the butterfly mechanism, the design allows for much greater control when typing.</p>
+                    </div>
+                    <figure class="specs">
+                        <div class="badge-content">
+                            <span class="badge-large">17<span class="badge-half">%</span></span><br>
+                            <span>Larger Keys</span>
+                        </div>
+                        <div class="badge-content">
+                            <span class="badge-large">40<span class="badge-half">%</span></span><br>
+                            <span>Thinner Key Assembly</span>
+                        </div>
+                    </figure>
+                </div>
+            </section>
         </section>
     </section>
 </template>
@@ -131,6 +149,50 @@
             margin-top: 100px;
             width: 800px;
             margin: auto;
+        }
+        .keyboard-design{
+            background-color: #F2F2F2;
+            padding-top: 110px;
+            padding-bottom: 110px;
+        }
+        .key-design{
+            display: flex;
+            justify-content: space-between;
+            width: 800px;
+            margin: auto;
+            
+            .info{
+                p{
+                    width: 350px;
+                    margin-bottom: 0px;
+                }
+            }
+            .specs{
+                display: flex;
+                align-items: center;
+
+                .badge-content{
+                    display: block;
+                    margin-left: 50px;
+
+                    .badge-large{
+                        font-size: 90px;
+                        font-weight: lighter;
+                        color: #BEB19A;
+                    }
+                    .badge-half{
+                        font-size: 50px;
+                        font-weight: lighter;
+                    }
+                    span{
+                        &:last-child{
+                            font-size: 15px;
+                            font-weight: lighter;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
         }
     }
 </style>
