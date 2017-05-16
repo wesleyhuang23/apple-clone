@@ -17,21 +17,21 @@
             <div class="line"></div>
             <h1>A keyboard reimagined from <br> A to Z.</h1>
             <p>From the beginning, our goal was to design a full, uncompromising Mac experience. And a full-size keyboard is an essential part of that. In order to fit a full-size keyboard in the incredibly thin MacBook, we designed the keyboard from the ground up. Each component has been rethought, from the underlying mechanism to the curvature of the surface of each key to the distinctive new typeface. The result is a keyboard dramatically thinner than its predecessor. Now when your finger strikes the key, it goes down and bounces back with a crisp, consistent motion that makes typing with precision a breeze.</p>
-            <div class="img">
-                <img src="./../../assets/apple-img/mac/macbook/design/design_keyboard_large_2x.jpg"/>
-            </div> 
-            <div class="butterfly">
-                <h2>Butterfly mechanism</h2>
-                <p>Traditional keyboards use a scissor mechanism, which tends to wobble around the edges. This creates a lack of precision when you strike anywhere except the center of the key. We needed to reduce key wobbling for a keyboard this thin; otherwise, striking a key off-center could result in the keycap hitting bottom before a keystroke registers. So we designed a unique butterfly mechanism, which is wider than the scissor mechanism and has a single assembly made from a stiffer material — allowing for a more stable, responsive key that takes up less vertical space. This innovative design improves stability, uniformity, and control — no matter where you press on the key.</p>
-            </div>
-            <div class="row">
-                <div class="traditional"> 
-                    <figure></figure>
+                <div class="img">
+                    <img src="./../../assets/apple-img/mac/macbook/design/design_keyboard_large_2x.jpg"/>
+                </div> 
+                <div class="butterfly">
+                    <h2>Butterfly mechanism</h2>
+                    <p>Traditional keyboards use a scissor mechanism, which tends to wobble around the edges. This creates a lack of precision when you strike anywhere except the center of the key. We needed to reduce key wobbling for a keyboard this thin; otherwise, striking a key off-center could result in the keycap hitting bottom before a keystroke registers. So we designed a unique butterfly mechanism, which is wider than the scissor mechanism and has a single assembly made from a stiffer material — allowing for a more stable, responsive key that takes up less vertical space. This innovative design improves stability, uniformity, and control — no matter where you press on the key.</p>
                 </div>
-                <div class="new">
-                    <figure></figure>
+                <div class="row">
+                    <div class="traditional"> 
+                        <figure></figure>
+                    </div>
+                    <div class="new">
+                        <figure></figure>
+                    </div>
                 </div>
-            </div>
             <section class="keyboard-design">
                 <div class="key-design">
                     <div class="info">
@@ -48,6 +48,13 @@
                             <span>Thinner Key Assembly</span>
                         </div>
                     </figure>
+                </div>
+            </section>
+            <section class="precision-lighting">
+                <h2>Precision backlighting</h2>
+                <p>When we set out to design an incredibly thin keyboard, one of the first things we considered was how to backlight the keys in a way that took up less space while delivering an even cleaner and more refined look and feel. To do that, we removed the row of LEDs and the light guide panel that distributed light throughout the keyboard and instead placed an individual LED under each key. These LEDs are calibrated for uniform brightness, so every key and character looks clear and sharp with minimal light around the keycap. All while being engineered for as much energy efficiency as possible.</p>
+                <div class="img">
+                    <img src="./../../assets/apple-img/mac/macbook/design/keyboard_backlight_off_large_2x.jpg"/>
                 </div>
             </section>
         </section>
@@ -193,6 +200,16 @@
                     }
                 }
             }
+        }
+    }
+    .precision-lighting{
+        padding-top: 110px;
+
+        h2{
+            text-align: center;
+        }
+        p{
+            font-size: 16px;
         }
     }
 </style>
