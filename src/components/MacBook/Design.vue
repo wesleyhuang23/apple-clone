@@ -57,6 +57,47 @@
                     <img src="./../../assets/apple-img/mac/macbook/design/keyboard_backlight_off_large_2x.jpg"/>
                 </div>
             </section>
+            <section class="retina"> 
+                <figure>
+                    <img src="./../../assets/apple-img/mac/macbook/design/design_retina_large_2x.png"/>
+                </figure>
+                <div class="section-content">
+                    <div class="line"></div>
+                    <h2>3 million pixels. <br> 0.88 millimeter. Razor sharp.</h2>
+                    <p>The 12-inch Retina display on MacBook isn’t just picture perfect — it’s also paper thin. In fact, at just 0.88 millimeter, it’s the thinnest Retina display ever on a Mac. A specially developed automated manufacturing process forms the impossibly thin edge-to-edge glass that’s only 0.5 millimeter thick. And we reduced the space between display components for a tighter, more integrated design.</p>
+                    <div class="row">
+                        <div class="column">
+                            <figure class="badge">
+                                <div class="badge-content">
+                                    <span class="badge-large">
+                                        2304
+                                        <span class="badge-half">x</span>
+                                        1440
+                                    </span>
+                                    <span class="badge-small">resolution</span>
+                                </div>
+                            </figure>
+                            <div class="wide">
+                                <figure class="badge-wide">
+                                    <div class="badge-content">
+                                        <span class="badge-large">16<span class="badge-large-colon">:</span>10</span>
+                                        <span class="badge-small">aspect ratio</span>
+                                    </div>
+                                </figure>
+                                <figure>
+                                    <div class="badge-content">
+                                        <span class="badge-large">178°</span>
+                                        <span class="badge-small">viewing angle</span>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="retina-graph">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </section>
 </template>
@@ -210,6 +251,52 @@
         }
         p{
             font-size: 16px;
+        }
+    }
+    .section-content{
+        width: 980px;
+        // border: 1px solid green;
+        margin: auto;
+    }
+    .badge-large{
+        display: block;
+        position: relative;
+        left: -2px;
+        margin-right: auto;
+        font-size: 80px;
+        line-height: 0.8;
+        font-weight: lighter;
+        white-space: nowrap;
+        color:#BEB19A;
+        background-color: white;
+    }
+    .retina{
+        figure{
+            width: 900px;
+            margin: auto;
+
+            img{
+                width: 100%;
+            }
+        }
+        .line{
+            margin-left: 0px;
+        }
+        p{
+            margin-bottom: 60px;
+            margin-left: 0;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            width: 100%;
+            font-weight: lighter        }
+        .retina-graph{
+            width: 100%;
+            border: 1px solid green;
+        }
+        .wide{
+            display: flex;
         }
     }
 </style>
