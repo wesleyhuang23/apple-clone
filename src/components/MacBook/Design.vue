@@ -96,6 +96,25 @@
 
                         </div>
                     </div>
+                    
+                    <div class="row">
+                        <figure class="pixel-macbook">
+                            <img src="./../../assets/apple-img/mac/macbook/design/pixel_macbook_large_2x.jpg"/>
+                        </figure>
+                        <div class="pixel-content">
+                            <p>To deliver the gorgeous Retina experience on the sleek MacBook, we had to innovate on every level, right down to the pixel. So we redesigned the pixels to create a larger aperture, allowing more light to pass through. This enabled us to use LED backlighting that’s 30 percent more energy efficient than the Retina display on any other Mac notebook, yet still achieve the same level of vivid brightness.</p>
+                            <figure>
+                                <div class="pixel-figure">
+                                    <img src="./../../assets/apple-img/mac/macbook/design/pixel_base_large_2x.png"/>
+                                </div>
+                                <figcaption>
+                                    <span class="badge-small">LARGER APETURE <br> IN EACH PIXEL</span>
+                                    <br>
+                                    <a href="#">Replay></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </section>
         </section>
@@ -271,6 +290,7 @@
         background-color: white;
     }
     .retina{
+        padding-bottom: 70px;
         figure{
             width: 900px;
             margin: auto;
@@ -290,13 +310,55 @@
             display: grid;
             grid-template-columns: 50% 50%;
             width: 100%;
-            font-weight: lighter        }
+            font-weight: lighter;
+            position: relative; 
+            z-index: 2;       
+        }
         .retina-graph{
             width: 100%;
             border: 1px solid green;
         }
         .wide{
             display: flex;
+        }
+        .pixel-content{
+            margin-bottom: 100px;
+            padding-top: 314px;
+            padding-bottom: 185px;
+            position: relative;
+            left: 600px;
+            width: 421px;
+            float: right;
+            // border: 1px solid green;
+
+            p{
+                width: 421px;
+            }
+            figure{
+                display: flex;
+                align-items: center;
+            }
+            figcaption{
+                margin-left: 20px;
+                font-family: "Myriad Set Pro" 600;
+                color: #999999;
+            }
+            .pixel-figure{
+                width: 157px;
+                height: 157px;
+            }
+        }
+        .pixel-macbook{
+            position: absolute;
+            bottom: -44px;
+            left: 0;
+            margin-left: -548px;
+            z-index: -1;
+
+            img{
+                height: 1034px;
+                width: 1882px;
+            }
         }
     }
 </style>
